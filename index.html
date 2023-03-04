@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>AUTHENTICATION AND REDUCE METHOD</h1>
+
+    <script>
+        //       STEP1::THIS IS LOGIN PAGE
+        // 	if (isAuthValid === 'Login Success') {
+        // 				sessionStorage.setItem('username', username);
+        // 				localStorage.setItem('username', username);
+        // };
+
+        // //THIS IS LOGOUTLISTENER.
+        // 	logoutListener = e => {
+        // 		if (e.key === 'username' && e.oldValue && !e.newValue) {
+        // 			this.props.logout();
+        // 			this.props.history.push('/login');
+        // 		}
+        // 	};
+
+        // STEP2: WHEN WE CLICK NEW TAP AT THAT TIME COMPONENTDIDMOUNT CALLLING
+        // componentDidMount() {
+        // 		const { history } = this.props;
+        // 		const localUserName = localStorage.getItem('username');
+        // 		const windowUserName = window.sessionStorage.getItem('username');
+        // 		if (localUserName === null && windowUserName === null) {
+        // 			history.push({
+        // 				pathname: '/login'
+        // 			});
+        // 		}
+
+        // 		window.addEventListener('storage', this.logoutListener);
+        // 		if (!this.state.accessGranted) {
+        // 			this.redirectRoute();
+        // 		}
+        // 	}
+
+        // STEP:3 WHEN WE LOGOUT , AT THAT TIME THE DOM HAS ROMOVED.
+        // 	componentWillUnmount() {
+        // 		window.removeEventListener('storage', this.logoutListener);
+        // 	}
+
+        // NOTE: NAAMA OVVOURU TAB OPEN PANNUMPODHU window.addEventListener('storage', this.logoutListener); IDHA ADD PANROM.
+        // THEN, NAAMA LOGOUT KODUKKUMPODHU, LOCAL STORAGE LA ULLLA VALUE REMOVE PANNUVOM. LOCAL STORAGE REMOVE AAGUMPODHU APPLICATION 
+        // DOM LA IRUNDHU REMOVE AAGUM.DOM LA IRUNDHU REMOVE AAGUMPODHU COMPONENTWILLUNMOUNT CALL AAGUM. COMPONENTWILLUNMOUNT CALL AAGUMPODHU
+        // window.removeEventListener('storage', this.logoutListener); IDHU CALL AAGUM.INDHA REOMOVE EVENT LISTENER CALL AAGUMPODHU LOCAL STORAGE 
+        // LA CHANGES NADANDHURKKU NU CURRENT LA ULLA TAB AH VITTUTU MATTHA YELLA TAB LA ULLA window.addEventListener('storage', this.logoutListener);
+        // AH REMOVE PANNA SOLLI window.removeEventListener('storage', this.logoutListener); CALL AAGUM.removeEventListener CALL AAGUMPODHU
+        // IDHUKKU MUNNADI OLD AND NEW VALUE ENNANU CHECK PANNITU ADHUKKU APPARAM NAAMA  LOGIN PAGEKU PUSH PANROM.
+
+
+
+
+        // THIS IS FOR REDUCE METHOD
+        // const planDetails = [
+        //     {
+        //         "vesselName": "PIRIKA MOSIRI MARU",
+        //         "voyageNo": "0063",
+        //         "planName": "test_aynr",
+        //         "checked": true,
+        //     },
+        //     {
+        //         "vesselName": "PIRIKA MOSIRI MARU",
+        //         "voyageNo": "0063",
+        //         "planName": "testaynur01",
+        //         "checked": false
+        //     }
+        // ];
+        // console.log(planDetails)
+        // let y = "dow"
+        // let x = planDetails.reduce((pre,cure)=>{
+        // if(cure.checked){
+        //   if(y == "ob"){
+        //     pre.push(cure.planName+"_1");
+
+        //   }else if(y=="dow"){
+        //      pre.push(cure.planName);
+        //   }
+        // }
+        //  return pre
+
+        // },[])
+        // console.log(x)
+
+        // ANOTHER WAY
+        // const confirmPlans = confirmPlanname.reduce((plans, plan) => {
+        // 		if (!plan.checked) return plans;
+        // 		if (handleStatus === 'onConfirmed') {
+        // 			plans.push(`${plan.planName}_1`);
+        // 		}
+        // 		if (handleStatus === 'onDownload') {
+        // 			plans.push(plan.planName);
+        // 		}
+        // 		return plans;
+        //  }, []);
+        //  console.log(confirmPlans, 'confirmplanss');
+    </script>
+</body>
+
+</html>
